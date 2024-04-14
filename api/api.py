@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
 room_list = [
     {
         "room_key": 1,
@@ -28,7 +29,7 @@ room_list = [
 ]
 
 
-@app.route('/', methods=['GET'])
+@app.route('/rooms', methods=['GET'])
 def index():
 	return jsonify({'rooms': room_list})
 

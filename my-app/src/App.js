@@ -1,15 +1,15 @@
 import React from 'react';
 import RoomList from './Components/RoomList';
-import './App.css'; 
+import './styles.scss'; 
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>Hotel Paratytech</h1>
+        <h4>Hotel Paratytech</h4>
       </header>
       <main>
-        <RoomList /> 
+        <RoomList/> 
       </main>
       <footer>
       </footer>

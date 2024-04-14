@@ -1,6 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 
 app = Flask(__name__)
+
 
 
 room_list = [
@@ -27,7 +28,9 @@ room_list = [
         ]
     }
 ]
-
+@app.route('/static/<path:path>')
+def send_static(path):
+	return send_from_directory('static', path)
 
 @app.route('/rooms', methods=['GET'])
 def index():

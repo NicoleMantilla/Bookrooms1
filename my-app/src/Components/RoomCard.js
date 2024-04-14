@@ -2,16 +2,18 @@ import React from 'react';
 
 function RoomCard({ room }) {
   return (
-    <div className="room-card">
+    <figure className="image-block">
       <img src={room.room_picture} alt={room.room_name} />
       <div className="room-details">
-        <h2>{room.room_name}</h2>
+        <h1>{room.room_name}</h1>
+        <figcaption>
         <p>{room.room_description}</p>
         <ul>
           {room.available_occupancy.map((occupancy, index) => (
             <li key={index}>{occupancy}</li>
           ))}
         </ul>
+        
         <h3>Precios:</h3>
         {room.data_prices.map((priceGroup, index) => (
           <div key={index}>
@@ -22,8 +24,9 @@ function RoomCard({ room }) {
             ))}
           </div>
         ))}
+        </figcaption>
       </div>
-    </div>
+    </figure>
   );
 }
 

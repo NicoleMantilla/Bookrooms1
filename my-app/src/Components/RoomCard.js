@@ -3,7 +3,7 @@ import React from 'react';
 function RoomCard({ room }) {
   return (
     <figure className="image-block">
-      <img src={room.room_picture} alt={room.room_name} />
+      <img src={`/images/${room.room_picture}`} alt={room.room_name} />
       <div className="room-details">
         <h1>{room.room_name}</h1>
         <figcaption>

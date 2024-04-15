@@ -39,6 +39,7 @@ function RoomList() {
           <RoomCard key={room.room_key} room={room} />
         ))}
       </div>
+      <section id="formulario">
       <div className='search-container'>
       <SearchForm onSearch={handleSearch} />
       {searchResults.length > 0 && (
@@ -55,6 +56,7 @@ function RoomList() {
         <p>{searchError}</p>
       )}
       </div>
+      </section>
     </div>
   );
 }

@@ -51,6 +51,38 @@ h4{
 	z-index: 999;
 
 }
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff; // Cambia al color que desees
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	z-index: 1000; // Alta z-index para asegurarse de que se superponga a otros elementos
+  
+	.navbar-list {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+	  display: flex;
+	  justify-content: space-around; // Esto distribuirá los elementos del menú de forma equitativa
+  
+	  li {
+		padding: 10px 15px;
+		
+		a {
+		  text-decoration: none;
+		  color: #333333; // Cambia al color que desees
+		  transition: color 0.3s ease;
+  
+		  &:hover {
+			color: #1abc9c; // Cambia para resaltar el enlace al pasar el ratón
+		  }
+		}
+	  }
+	}
+  }
+  
 .roomlist-container {
 	display: flex;
 	flex-direction: column;

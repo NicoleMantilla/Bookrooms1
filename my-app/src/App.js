@@ -1,6 +1,7 @@
 import React from 'react';
 import RoomList from './Components/RoomList';
-import './styles.scss'; 
+import './styles.scss';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
@@ -8,8 +9,11 @@ function App() {
       <header className="main-header">
         <h4>Hotel Paratytech</h4>
       </header>
+      <Navbar />
       <main>
-        <RoomList/> 
+      <section id="habitaciones">
+        <RoomList/>
+      </section> 
       </main>
       <footer>
       </footer>

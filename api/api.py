@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
 
 app = Flask(__name__)
 
@@ -35,6 +35,19 @@ def send_static(path):
 @app.route('/rooms', methods=['GET'])
 def index():
 	return jsonify({'rooms': room_list})
+def get_rooms():
+	adults = request.args.get('adults', type=int)
+	children = request.args.get('children', type=int)
+	babies = request.args.get('babies', type=int)
+	max_price = request.args.get('max_price', type=float)
+	filtered_rooms = filter(lambda room: 
+        (adults is None or adults in room['available_occupancy']) and
+        (children is None or children in room['available_occupancy']) and
+        (babies is None or babies in room['available_occupancy']) and
+        (max_price is None or any(price['price'] <= max_price for price_group in room['data_prices'] for price in price_group)),
+        room_list)
+	return jsonify({'rooms': list(filtered_rooms)})
+	
 
 if __name__ == '__main__':
 	app.run(debug=True)

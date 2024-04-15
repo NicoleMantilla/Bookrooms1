@@ -18,15 +18,20 @@ $lg: new-breakpoint(min-width 1024px);
 }
 
 html {
+	padding-top: 60px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-smooth: auto;
 	font-weight: 300;
 	line-height: 1.5;
 	color: #444;
+	margin: 0;
+	padding: 0;
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -51,29 +56,40 @@ h4{
 	z-index: 999;
 
 }
+.main-header {
+	margin-top: 0px;
+
+}
 
 .navbar {
+	width: 100%;
 	position: fixed;
 	top: 0;
-	width: 100%;
-	background-color: #ffffff; // Cambia al color que desees
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	z-index: 1000; // Alta z-index para asegurarse de que se superponga a otros elementos
+	left: 50%;
+	transform: translateX(-50%); 
+	background: #fff; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
   
 	.navbar-list {
 	  list-style: none;
+	  justify-content: center;
 	  padding: 0;
 	  margin: 0;
 	  display: flex;
-	  justify-content: space-around; // Esto distribuirá los elementos del menú de forma equitativa
+	  align-items: center;
+	  
   
 	  li {
 		padding: 10px 15px;
+		margin: 0 15px;
 		
 		a {
 		  text-decoration: none;
 		  color: #333333; // Cambia al color que desees
 		  transition: color 0.3s ease;
+		  padding: 10px 15px;
+		  display: block;
   
 		  &:hover {
 			color: #1abc9c; // Cambia para resaltar el enlace al pasar el ratón
@@ -87,10 +103,10 @@ h4{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 20px; // Espacio entre el menú y el contenido
+	margin-top: 20px; 
   
 	.search-container {
-	  margin-bottom: 20px; // Espacio entre el formulario de búsqueda y el título
+	  margin-bottom: 20px; 
 	}
 }
 .room-list {

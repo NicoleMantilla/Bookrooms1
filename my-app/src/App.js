@@ -6,9 +6,6 @@ import Navbar from './Components/Navbar';
 function App() {
   return (
     <div className="app-container">
-      <header className="main-header">
-        <h4>Hotel Paratytech</h4>
-      </header>
       <Navbar />
       <main>
       <section id="habitaciones">

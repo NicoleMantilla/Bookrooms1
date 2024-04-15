@@ -32,7 +32,9 @@ function RoomList() {
 
 
   return (
+    
     <div className='roomlist-container'>
+      <h1 className="roomlist-title">Hotel Paratytech</h1>
       <h1>Habitaciones disponibles </h1>
       <div className="room-list">
         {rooms.map(room => (

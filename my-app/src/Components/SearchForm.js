@@ -12,23 +12,23 @@ function SearchForm({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSearch}>
-      <label>
-        Número de adultos:
+<form className="search-form" onSubmit={handleSearch}>
+      <div className="form-field">
+        <label>Número de adultos:</label>
         <input type="number" value={adults} onChange={(e) => setAdults(e.target.value)} />
-      </label>
-      <label>
-        Número de niños:
+      </div>
+      <div className="form-field">
+        <label>Número de niños:</label>
         <input type="number" value={children} onChange={(e) => setChildren(e.target.value)} />
-      </label>
-      <label>
-        Número de bebés:
+      </div>
+      <div className="form-field">
+        <label>Número de bebés:</label>
         <input type="number" value={babies} onChange={(e) => setbabies(e.target.value)} />
-      </label>
-      <label>
-        Precio máximo:
+      </div>
+      <div className="form-field">
+        <label>Precio máximo:</label>
         <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
-      </label>
+      </div>
       <button type="submit">Buscar</button>
     </form>
   );

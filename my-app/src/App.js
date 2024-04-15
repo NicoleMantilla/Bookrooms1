@@ -4,8 +4,8 @@ import './styles.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <div className="app-container">
+      <header className="main-header">
         <h4>Hotel Paratytech</h4>
       </header>
       <main>

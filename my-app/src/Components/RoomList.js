@@ -32,13 +32,14 @@ function RoomList() {
 
 
   return (
-    <div>
+    <div className='roomlist-container'>
       <h1>Habitaciones disponibles </h1>
       <div className="room-list">
         {rooms.map(room => (
           <RoomCard key={room.room_key} room={room} />
         ))}
       </div>
+      <div className='search-container'>
       <SearchForm onSearch={handleSearch} />
       {searchResults.length > 0 && (
         <div>
@@ -53,6 +54,7 @@ function RoomList() {
       {searchError && (
         <p>{searchError}</p>
       )}
+      </div>
     </div>
   );
 }

@@ -21,7 +21,6 @@ html {
 	padding-top: 60px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	font-smooth: auto;
 	font-weight: 300;
 	line-height: 1.5;
 	color: #444;
@@ -115,7 +114,7 @@ h4{
 	}
 }
 .room-list {
-	margin-top: 1100px; 
+	margin-top: 1000px; 
 }
 
 .room-card {
@@ -135,12 +134,12 @@ h4{
 		left: 20px;
 		margin: 0;
 		color: #fefafa;
-		font-size: 24px; // Ajusta el tamaño de la fuente según sea necesario
-		font-weight: 600; // Ajusta el peso de la fuente según sea necesario
+		font-size: 24px; 
+		font-weight: 600;
 		line-height: 1.2;
 		transition: opacity 0.25s ease;
-		z-index: 10; // Asegúrate de que el z-index sea suficiente para estar por encima de la imagen pero debajo del overlay
-		opacity: 1; // Asegúrate de que esto esté aquí para que el título se muestre inicialmente
+		z-index: 10; 
+		opacity: 1; 
 	  }
 	&:hover {
 		box-shadow: 0 5px 15px rgb(0,0,0,0.2);
@@ -153,6 +152,7 @@ h4{
 	  width: 100%;
 	  height: auto;
 	  transition: transform 0.3s ease;
+	  
 	}
 	h1 {
 		position: absolute;
@@ -264,7 +264,76 @@ button {
 	font-size: 14px;
 	cursor: pointer;
 }
+.room-detail-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	padding: 20px;
+	width: 100%;
+	background: #fff; 
 
   
-
-
+	.room-title {
+	  font-size: 32px;
+	  color: rgb(15, 125, 236);
+	  margin-bottom: 10px;
+	  text-align: center;
+	  font-weight: 500;
+	  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	}
+  
+	.room-image {
+	  width: 40%;
+	  height: auto;
+	  object-fit: cover;
+	  border-radius: 5px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  margin-bottom: 20px;
+	}
+  
+	.room-description {
+	  font-size: 18px;
+	  line-height: 1.6;
+	  color: rgba(0, 0, 0, 0.996);
+	  margin-bottom: 20px;
+	  text-align: center;
+	}
+  
+	.room-info {
+	  width: 50%;
+	  text-align: center;
+  
+	  .room-availability,
+	  .room-prices {
+		background: rgb(255, 255, 255);
+		padding: 15px;
+		margin-bottom: 10px;
+  
+		h3 {
+		  margin-top: 0;
+		  margin-bottom: 10px;
+		  color: #040000;
+		}
+  
+		ul {
+		  list-style: none;
+		  padding: 0;
+		  text-align: center;
+  
+		  li {
+			padding: 5px 0;
+			color: #000000;
+		  }
+		}
+  
+		.price-group {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  margin-bottom: 5px;
+		}
+	  }
+	}
+  }
+  

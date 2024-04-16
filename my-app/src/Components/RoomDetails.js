@@ -3,19 +3,19 @@ import React from 'react';
 function RoomDetails({ room }) {
 
 	return (
-	  <figure id="more info">
+	  <figure className= "room-detail-section" id="more info">
 		<div>
-		  <h1>{room.room_name}</h1>
+		  <div className='room-title'>{room.room_name}</div>
 		</div>
-		<img src={`/images/${room.room_picture}`} alt={room.room_name} className="room-image" />
-		<div>
+		<img className='room-image' src={`/images/${room.room_picture}`} alt={room.room_name} />
+		<div className='room-info'>
 		  <div>
-			<p>{room.room_description}</p>
-			<div>
-			  <h3>Disponibilidad:</h3>
+			<p className='room-description'>{room.room_description}</p>
+			<div className='room-availability'>
+			  <h1>Disponibilidad:</h1>
 			  <ul>
 				{room.available_occupancy.map((occupancy, index) => (
-				  <li key={index}>{occupancy}</li>
+				  <li  key={index}>{occupancy}</li>
 				))}
 			  </ul>
 			</div>        

@@ -143,7 +143,7 @@ h4{
 	  }
 	&:hover {
 		box-shadow: 0 5px 15px rgb(0,0,0,0.2);
-		.room-details {
+		.room-caption h1 {
 			overflow-y: auto;
 		}
 	} 
@@ -193,19 +193,55 @@ h4{
   }
 
   &:hover {
-    .room-caption .room-title {
-      opacity: 0; 
+    .room-caption h1 {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		color: #fefafa;
+		font-size: 24px;
+		font-weight: 600;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
     }
     .room-overlay {
-      opacity: 1;
-      visibility: visible;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		pointer-events: none;
     }
-    .room-details {
-      opacity: 1; 
-    }
-    .room-image {
-      transform: scale(1.1); 
-    }
+
+	&:hover {
+		.room-caption h1 {
+		  visibility: hidden;
+		  opacity: 0;
+		}
+		
+		.room-overlay {
+		  opacity: 1;
+		  visibility: visible;
+		  pointer-events: all;
+		}
+		
+		.room-image {
+		  transform: scale(1.1);
+		}
+	  }
+    // .room-details {
+    //   opacity: 1; 
+    // }
+    // .room-image {
+    //   transform: scale(1.1); 
+    // }
   }
 }
 .search-form {
@@ -250,7 +286,7 @@ p {
 	font-size: 14px;
 	line-height: 1.75;
 }
-button {
+.more-info-button {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -263,6 +299,12 @@ button {
 	color: white;
 	font-size: 14px;
 	cursor: pointer;
+	
+	.room-card:hover & {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all; // Ahora es interactuable
+  }
 }
 .room-detail-section {
 	display: flex;

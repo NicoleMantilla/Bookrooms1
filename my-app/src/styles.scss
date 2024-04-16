@@ -41,25 +41,24 @@ body {
 }
 
 h4{
-	position: absolute;
-	top: 50px;
+	position: center;
+	top: 80px;
 	left: 20px;
 	margin: 0;
 	padding: 0;
-	color: rgb(56, 56, 230);
+	color: rgb(28, 88, 217);
 	font-size: 60px;
 	font-weight: 600;
 	line-height: 1;
 	opacity: 1;
 	transform: scale(1);
-	transition: 0.25s ease;
-	z-index: 999;
 
 }
-.main-header {
-	margin-top: 0px;
-
-}
+.main-title {
+	margin-top: 80px; 
+	text-align: center;
+	padding-top: 400px; 
+  }
 
 .navbar {
 	width: 100%;
@@ -86,13 +85,13 @@ h4{
 		
 		a {
 		  text-decoration: none;
-		  color: #333333;
+		  color: #333333; // Cambia al color que desees
 		  transition: color 0.3s ease;
 		  padding: 10px 15px;
 		  display: block;
   
 		  &:hover {
-			color: #1abc9c; 
+			color: #1abc9c; // Cambia para resaltar el enlace al pasar el ratón
 		  }
 		}
 	  }
@@ -103,10 +102,10 @@ h4{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 20px; 
+	margin-top: 20px; // Espacio entre el menú y el contenido
   
 	.search-container {
-	  margin-bottom: 20px; 
+	  margin-bottom: 20px; // Espacio entre el formulario de búsqueda y el título
 	}
 }
 .room-list {
@@ -116,11 +115,19 @@ h4{
 .room-card {
 	position: relative;
 	width: 100%;
-	max-width: 375px; 
+	max-width: 350px;
+	margin: 20px auto;
 	overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	margin-bottom: 30px; 
+	box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-bottom: 30px;
+	transition: all .3s ease;
+	&:hover {
+		box-shadow: 0 5px 15px rgb(0,0,0,0.2);
+		.room-details {
+			overflow-y: auto;
+		}
+	} 
   
 	.room-image {
 	  width: 100%;

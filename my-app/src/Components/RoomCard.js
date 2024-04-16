@@ -10,6 +10,7 @@ function RoomCard({ room }) {
       <div className="room-overlay">
         <div className="room-details">
           <p className="room-description">{room.room_description}</p>
+          
           <div className="room-availability">
             <h3>Disponibilidad:</h3>
             <ul>

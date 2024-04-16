@@ -34,8 +34,9 @@ function RoomList() {
   return (
     
     <div className='roomlist-container'>
-      <h1 className="roomlist-title">Hotel Paratytech</h1>
-      <h1>Habitaciones disponibles </h1>
+      <header className="main-title">
+        <h4>Hotel Paratytech</h4>
+      </header>
       <div className="room-list">
         {rooms.map(room => (
           <RoomCard key={room.room_key} room={room} />

@@ -8,6 +8,14 @@ function RoomList() {
   const [rooms, setRooms] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [searchError, setSearchError] = useState('');
+  
+  const handleMoreInfoClick = (roomKey) => {
+    const roomDetailsSection =document.getElementById(`room-details-${roomKey}`);
+    if(roomDetailsSection) {
+      roomDetailsSection.scrollIntoView({ behavior:"smooth"})
+    }
+
+  }
 
   useEffect(() => {
     if (searchResults.length > 0) {
@@ -46,7 +54,7 @@ function RoomList() {
       </header>
       <div className="room-list">
         {rooms.map(room => (
-          <RoomCard key={room.room_key} room={room} />
+          <RoomCard key={room.room_key} room={room} onMoreInfoClick={handleMoreInfoClick}/>
         ))}
       </div>
       <section id= "habitaciones">

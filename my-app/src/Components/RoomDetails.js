@@ -3,7 +3,7 @@ import React from 'react';
 function RoomDetails({ room }) {
 
 	return (
-	  <figure className= "room-detail-section" id="more info">
+	  <figure className= "room-detail-section" id={`room-details-${room.room_key}`}>
 		<div>
 		  <div className='room-title'>{room.room_name}</div>
 		</div>

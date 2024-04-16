@@ -10,6 +10,7 @@ function SearchForm({ onSearch }) {
     e.preventDefault();
     onSearch({ adults, children, babies, maxPrice });
   };
+  
 
   return (
 <form className="search-form" onSubmit={handleSearch}>

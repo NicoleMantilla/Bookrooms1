@@ -10,6 +10,12 @@ function RoomList() {
   const [searchError, setSearchError] = useState('');
 
   useEffect(() => {
+    if (searchResults.length > 0) {
+      document.getElementById("search-results-section").scrollIntoView({ behavior: "smooth" });
+    }
+  }, [searchResults]);
+
+  useEffect(() => {
     fetch('/rooms')
       .then(response => response.json())
       .then(data => setRooms(data.rooms))
@@ -54,7 +60,7 @@ function RoomList() {
       <div className='search-container'>
       <SearchForm onSearch={handleSearch} />
       {searchResults.length > 0 && (
-        <div>
+        <div id = "search-results-section">
           <h2>Resultados de la búsqueda</h2>
           <div className="room-details">
             {searchResults.map(room => (

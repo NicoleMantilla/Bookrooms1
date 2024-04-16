@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RoomCard from './RoomCard'; 
 import SearchForm from './SearchForm';
+import RoomDetails from './RoomDetails';
 
 
 function RoomList() {
@@ -42,15 +43,22 @@ function RoomList() {
           <RoomCard key={room.room_key} room={room} />
         ))}
       </div>
+      <section id= "habitaciones">
+        <div className="room-details">
+          {rooms.map(room => (
+            <RoomDetails key={room.room_key} room={room} />
+          ))}
+        </div> 
+      </section>
       <section id="formulario">
       <div className='search-container'>
       <SearchForm onSearch={handleSearch} />
       {searchResults.length > 0 && (
         <div>
           <h2>Resultados de la búsqueda</h2>
-          <div className="room-list">
+          <div className="room-details">
             {searchResults.map(room => (
-              <RoomCard key={room.room_key} room={room} />
+              <RoomDetails key={room.room_key} room={room} />
             ))}
           </div>
         </div>

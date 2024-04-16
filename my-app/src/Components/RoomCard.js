@@ -7,10 +7,11 @@ function RoomCard({ room, onMoreInfoClick }) {
   }
   return (
     <figure className="room-card" >
+
       <img src={`/images/${room.room_picture}`} alt={room.room_name} className="room-image" />
-      <div className="room-caption">
-        {/* <h1>{room.room_name}</h1> */}
-      </div>
+      {/* <div className="room-title">
+        <h1>{room.room_name}</h1> 
+      </div> */}
       <div className="room-overlay">
         <div>
           <p className="room-description">{room.room_description}</p>

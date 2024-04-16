@@ -28,14 +28,11 @@ Copy code
 cd backend
 python api.py
 
-markdown
-Copy code
+
 2. Inicia el servidor frontend:
 cd frontend
 npm start
 
-markdown
-Copy code
 3. Abre tu navegador web y visita [http://localhost:3000](http://localhost:3000) para ver la aplicación en acción.
 
 ## Funcionalidades

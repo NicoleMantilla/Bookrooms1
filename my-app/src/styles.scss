@@ -193,7 +193,7 @@ h4{
   }
 
   &:hover {
-    .room-caption h1 {
+    .room-caption  {
 		position: absolute;
 		top: 20px;
 		left: 20px;
@@ -216,7 +216,7 @@ h4{
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 20px;
+		// padding: 20px;
 		pointer-events: none;
     }
 
@@ -236,12 +236,6 @@ h4{
 		  transform: scale(1.1);
 		}
 	  }
-    // .room-details {
-    //   opacity: 1; 
-    // }
-    // .room-image {
-    //   transform: scale(1.1); 
-    // }
   }
 }
 .search-form {
@@ -303,7 +297,7 @@ p {
 	.room-card:hover & {
     visibility: visible;
     opacity: 1;
-    pointer-events: all; // Ahora es interactuable
+    pointer-events: all; 
   }
 }
 .room-detail-section {
@@ -313,10 +307,12 @@ p {
 	margin-top: 20px;
 	padding: 20px;
 	width: 100%;
-	background: #fff; 
+	background: #fff;
+	 
 
   
 	.room-title {
+	  margin-top: 0;
 	  font-size: 32px;
 	  color: rgb(15, 125, 236);
 	  margin-bottom: 10px;
@@ -340,11 +336,13 @@ p {
 	  color: rgba(0, 0, 0, 0.996);
 	  margin-bottom: 20px;
 	  text-align: center;
+	  margin-top: 0;
 	}
   
 	.room-info {
 	  width: 50%;
 	  text-align: center;
+	  margin-top: 0;
   
 	  .room-availability,
 	  .room-prices {
